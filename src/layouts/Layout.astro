@@ -26,9 +26,28 @@ const { title } = Astro.props
     <title>{title}</title>
     <ViewTransitions />
   </head>
+
+    <style>
+      .watermark {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        color: rgba(0, 0, 0, 0.1);
+        font-size: 4rem;
+        font-weight: bold;
+        pointer-events: none;
+        z-index: -1;
+        white-space: nowrap;
+      }
+    </style>
+
   <body
     class="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal overflow-hidden"
   >
+
+      <div class="watermark">Total and Unmitigated Defeat today !</div>
+    
     <div class="wrapper flex flex-col h-screen">
       <Header />
       <div class="main-content flex-1 overflow-auto">
